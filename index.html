@@ -1,0 +1,228 @@
+<!doctype html><html lang=en dir=auto><head><meta name=generator content="Hugo 0.125.5"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>서울시 사립초등학교 모아보기</title>
+    <meta name=keywords content="서울,사립초등학교,정보,시각화,초등학교,지원"><meta name=description content="서울시 사립초등학교 모아보기 지원을 위한 정보"><meta name=author content="D"><link rel=canonical href=http://right-to-now.github.io/seoul-private-elementary-schools/><meta name=google-site-verification content="GTM-KF9L572Z"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin="anonymous" href="/assets/css/stylesheet.54405a410796490bc874ab6181fac9b675753cc2b91375d8f882566459eca428.css" integrity="8B1MLvS3tY7fkmKiCu7/2pM+bl2Bh9b8MhnOjF6iZYM=" rel="preload stylesheet" as="style"><link rel=icon href=http://right-to-now.github.io/seoul-private-elementary-schools/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=http://right-to-now.github.io/seoul-private-elementary-schools/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=http://right-to-now.github.io/seoul-private-elementary-schools/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=http://right-to-now.github.io/seoul-private-elementary-schools/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=http://right-to-now.github.io/seoul-private-elementary-schools/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=http://right-to-now.github.io/seoul-private-elementary-schools/index.xml><link rel=alternate hreflang=en href=http://right-to-now.github.io/seoul-private-elementary-schools/><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KF9L572Z');</script><meta property="og:title" content="서울시 사립초등학교 모아보기"><meta property="og:description" content="서울시 사립초등학교 모아보기 정보를 한눈에 보여줘요."><meta property="og:type" content="website"><meta property="og:url" content="http://right-to-now.github.io/seoul-private-elementary-schools/"><meta property="og:image" content="https://right-to-now.github.io/seoul-private-elementary-schools/images/logo.svg"><meta property="og:site_name" content="서울시 사립초등학교 모아보기"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://right-to-now.github.io/seoul-private-elementary-schools/images/logo.svg"><meta name=twitter:title content="서울시 사립초등학교 모아보기"><meta name=twitter:description content="서울시 사립초등학교 모아보기 정보를 한눈에 보여줘요."><script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"서울시 사립초등학교 모아보기","url":"http://right-to-now.github.io/seoul-private-elementary-schools/","description":"서울시 사립초등학교 모아보기 정보를 한눈에 보여줘요.","thumbnailUrl":"http://right-to-now.github.io/seoul-private-elementary-schools/%3Clink%20/%20abs%20url%3E","sameAs":[]}</script>
+    <style>
+      svg .municipality-label {
+        paint-order: stroke;
+        fill:#101820;
+        fill-opacity:1;
+        stroke:#FCF6F5;
+        stroke-width:1.5px;
+        stroke-linecap:butt;
+        stroke-linejoin:miter;
+        stroke-opacity:1;
+        font-size: 14px;
+      }
+      svg #map text {
+        color: #333;
+        font-size: 10px;
+        text-anchor: middle;
+      }
+      div.tooltip {
+        position: absolute;
+        text-align: center;
+        line-height: 28px !important;
+        width: 150px;
+        height: 60px;
+        padding: 2px;
+        font: 12px sans-serif;
+        font-weight: bold;
+        border-radius: 8px;
+        pointer-events: none;
+        opacity: 0;
+        background-color:white;
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        z-index: 9999;
+      }
+      .center{
+        text-align: center;
+      }
+      p.small{
+        font-size: smaller;
+      }
+      .legendTitle {
+        font-size: 1.0rem;
+        fill: #4F4F4F;
+        font-weight: 300;
+      }
+      .legendScale {
+        font-size: 0.75rem;
+        fill: #4F4F4F;
+        font-weight: 200;
+      }
+    
+    </style>
+    <script src="http://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+    <script type="text/javascript" src="/js/tabulator.min.js"></script>
+    <link href="/assets/css/tabulator.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    
+    </head>
+    <body class=list id=top><!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KF9L572Z"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) --><header class=header><nav class=nav><div class=logo><a href=http://right-to-now.github.io/seoul-private-elementary-schools/ accesskey=h title="서울시 사립초등학교 모아보기 (Alt + H)"><img src=https://right-to-now.github.io/seoul-private-elementary-schools/images/logo.svg alt aria-label=logo height=35>서울시 사립초등학교 모아보기</a><div class=logo-switches></div></div><ul id=menu></ul></nav></header>
+      <div id="tooltip"></div>
+      <main class=main><article class="first-entry home-info">
+        <header class=entry-header>
+          <h1>서울시 사립초등학교 모아보기</h1>
+        </header>
+        <div class=entry-content style="overflow:visible">         
+          <section class="center">
+            <div id="seoul-private-elementary-school-information-table"></div>
+            <br/>
+            <h2>서울시 사립초등학교 정보를 보여줘요.</h2>
+            <br/>
+            <p>2024년 서울시 사립초등학교 데이터<sup>1)2)3)</sup>를 활용하여, 서울시 사립초등학교 정보를 한눈에 보기쉽게 정리했어요.</p>
+              <p class="small center">학교명 왼쪽 <i class="fa-solid fa-circle-plus"></i>아이콘을 누르면 더 많은 정보를 보여줘요. <br/>
+                학교명 오른쪽 링크는 ‘<i title='홈페이지' class='fa-solid fa-school'></i>홈페이지’와 ‘<i title='학교알리미' class='fa-solid fa-circle-info'></i>학교알리미’로 연결되요.<br/>
+                ‘재정 사용’ 그래프에 마우스를 올리면 자세한 정보를 보여줘요.</p>
+              <br/>
+            <p class="small">
+            1) 서울 열린 데이터 광장 <cite><a href="https://data.seoul.go.kr/dataList/OA-20555/S/1/datasetView.do" target="_blank">서울시 초등학교 기본정보</a></cite><br/>
+            2) 학교알리미 <cite><a href="https://www.schoolinfo.go.kr/ng/go/pnnggo_a01_l2.do" target="_blank">공개용 데이터</a></cite><br/>
+            3) <cite><a href="https://edss.moe.go.kr" target="_blank">에듀데이터서비스시스템(EDSS)</a> 개방용 에듀데이터</cite><br/>
+            3) 블로거 Trojan님이 정리하신 <cite><a href="https://blog.naver.com/usctrojan/223528366453" target="_blank">지방교육재정알리미 데이터</a></cite><br/>
+            </p>
+            </section>
+      </div>
+
+        
+        <button type="button" class="button" onclick="window.open('https://open.kakao.com/o/sOT5BXXg')"><i class="fa-solid fa-school"></i> 후원하기 <i class="fa-solid fa-school"></i></button>
+        <footer class=entry-footer><p class="small center">서울시 사립초등학교 모아보기가 도움이 되셨나요? 후원은 서비스 운영과 개선에 큰 힘이 됩니다.</p></footer></article></main><footer class=footer><span>&copy; 2024 서울시 사립초등학교 모아보기</span> - <a href="https://naver.me/FIfMcI4Y" target="_blank">데이터 시각화 문의 하기</a>
+    </footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+    </a>
+    <script>
+
+    d3.json("/js/seoul_private_element_schools.json").then(function(schools) {
+        
+        var tabledata = schools;
+
+        var financialMutator = function(value, data, type, params, component){            			
+            return (data["인적자원 운용"]*100).toFixed(2) + "," +(data["기본적 교육활동"]*100).toFixed(2) + "," +(data["선택적 교육활동"]*100).toFixed(2) + "," +(data["학생복지/교육격차 해소"]*100).toFixed(2) + "," +(data["교육활동지원"]*100).toFixed(2) + "," + (data["기타 운영"]*100).toFixed(2);
+        }
+        var disabledMutator = function(value, data, type, params, component){
+            fields = ['주 출입구 접근로 설치여부', '장애인 전용 주차구역 지정여부', '주출입구 높이차이 제거여부', '출입구(문) 설치유무', '복도', '계단/승강기/경사로/휠체어리프트 유무', '장애인용 대변기 설치여부', '장애인용 소변기 설치여부', '점자블록 설치여부', '유도 및 안내설비 설치여부', '경보 및 피난설비 설치여부']
+            rating = 0.0
+            for (field of fields) {
+                let value = data[field]
+                if(value == "적정설치") rating+=1;
+                else if (value == "단순설치") rating+=0.5;
+            }
+            return rating/2;
+        }
+        var teacherMutator = function(value, data, type, params, component){            
+            return data["총계 (원어민강사 미포함"]+ "명(교장+교감+수석+보직:"+data["보직교사(교장, 교감, 수석교사 포함"] + ", 일반:" + data["일반교사"] + ", 사서:" + data["사서교사"] + ", 보건:"+ data["보건교사"] + ", 영양:"+ data["영양교사"] + ", 기간제:"+ data["기간제교사"] + ", 강사:"+ data["강사"] + ")";
+        }
+
+       
+        var table = new Tabulator("#seoul-private-elementary-school-information-table", {
+        data:tabledata,           //load row data from array
+        layout:"fitDataFill",      //fit columns to width of table
+        // layout:"fitColumns",
+        // responsiveLayout:"hide",  //hide columns that don't fit on the table
+        responsiveLayout:"collapse",  //hide columns that don't fit on the table        
+        responsiveLayoutCollapseStartOpen:false,
+        rowHeader:{formatter:"responsiveCollapse", width:30, minWidth:30, hozAlign:"center", resizable:false, headerSort:false},
+        addRowPos:"top",          //when adding a new row, add it to the top of the table
+        history:false,             //allow undo and redo actions on the table        
+        pagination: false,       //paginate the data
+        paginationSize:40,         //allow 7 rows per page of data
+        paginationCounter:"rows", //display count of paginated rows in footer
+        movableColumns:false,      //allow column order to be changed        
+        footerElement:"",
+        initialSort:[             //set the initial sort order of the data
+            {column:"학교명", dir:"asc"},
+        ],
+        columnDefaults:{
+            tooltip:false,         //show tool tips on cells
+        },
+        columns:[                 //define the table columns
+            {title:"학교명", field:"학교명", editor: false},
+            {title:"<i title='홈페이지' class='fa-solid fa-school'></i>", field:"홈페이지주소", headerSort:false, headerHozAlign: "center", hozAlign:"center", width:40, formatterParams:{urlPrefix:""},
+            formatter: function(cell, formatterParams, onRendered){
+            let value = cell.getValue();
+            let href = `${formatterParams["urlPrefix"]}${value}`;
+            return "<a href="+href+" target='_blank' title='"+value+"'> <i class='fa-solid fa-link'></i></a>"
+            }},
+            {title:"<i title='학교알리미' class='fa-solid fa-circle-info'></i>", field:"정보공시 학교코드", headerSort:false, headerHozAlign: "center", hozAlign:"center", width:40, formatterParams:{urlPrefix:"https://www.schoolinfo.go.kr/ei/ss/Pneiss_b01_s0.do?GS_CD="},
+            formatter: function(cell, formatterParams, onRendered){
+            let value = cell.getValue();
+            var re = cell.getRow(cell); // get the row of the cell that was clicked
+            var name = re.getData()['학교명']; // gets the value of column "id" in the same row
+            let href = `${formatterParams["urlPrefix"]}${value}`;
+            return "<a href="+href+" target='_blank' title='"+name+" 학교알리미'> <i class='fa-solid fa-link'></i></a>"
+            }},
+            {title:"학생 수", field:"총 학생 수", hozAlign:"left"},
+            {title:"수업료", columns:[
+                {title:"학생 당 수업료", field:"학생 당 수업료",formatter:"money", formatterParams:{thousand:",",symbol:"원", symbolAfter:true, negativeSign:false, precision:0},hozAlign:"right"},
+                {title:"연간 수업료", field:"연간 수업료 (23년)", formatter:"money", formatterParams:{thousand:",",symbol:"원", symbolAfter:true, negativeSign:false, precision:0},hozAlign:"right"},
+                {title:"추가 비용", field:"추가 비용", formatter:"money", formatterParams:{thousand:",",symbol:"원", symbolAfter:true, negativeSign:false, precision:0},hozAlign:"right",},
+            ]},            
+            {title:"지원시설", field:"지원시 (체육관,강당,수영장 ,진로상담실)", headerSort:false,
+            formatter: function(cell, formatterParams, onRendered){
+            let value = cell.getValue();            
+            let gym = value[0];
+            let hall = value[1];
+            let pool = value[2];
+            let ccr = value[3];          
+            var icons = '';
+            if(gym == '1') icons+='<i class="fa-solid fa-dumbbell" title="체육관"></i>';
+            if(hall == '1') icons+='<i class="fa-solid fa-landmark" title="강당"></i>';
+            if(pool == '1') icons+='<i class="fa-solid fa-person-swimming" title="수영장"></i>';
+            if(ccr == '1') icons+='<i class="fa-solid fa-comments" title="진로상담실"></i>';
+            return icons
+            }},
+            {title:"전화번호", field:"전화번호", headerSort:false, hozAlign:"left"},          
+            {//create column group
+                title:"재정 사용", field:"financial_distribution", mutator:financialMutator, width: 147, formatterParams:{urlPrefix:""},
+            formatter: function(cell, formatterParams, onRendered){
+            let value = cell.getValue().split(',');
+            let hr = value[0]
+            let bl = value[1]
+            let ol = value[2]
+            let wf = value[3]
+            let sp = value[4]
+            let eo = value[5]
+            let href = `${formatterParams["urlPrefix"]}${value}`;
+            let bar = '<div style="position: relative; width: 100%; height: 1.5em;"><div title="인적자원 운용: '+hr+'%" data-max="100" data-min="0" style="display: inline-block; width: '+hr+'%; background-color: #003f5c; height: 100%;"></div><div title="기본적 교육활동: '+bl+'%" data-max="100" data-min="0" style="display: inline-block; width: '+bl+'%; background-color: #444e86; height: 100%;"></div><div title="선택적 교육활동: '+ol+'%" data-max="100" data-min="0" style="display: inline-block; width: '+ol+'%; background-color: #955196; height: 100%;"></div><div title="학생복지/교육격차 해소: '+wf+'%" data-max="100" data-min="0" style="display: inline-block; width: '+wf+'%; background-color: #dd5182; height: 100%;"></div><div title="교육활동지원: '+sp+'%" data-max="100" data-min="0" style="display: inline-block; width: '+sp+'%; background-color: #ff6e54; height: 100%;"></div><div title="기타 운영: '+eo+'%" data-max="100" data-min="0" style="display: inline-block; width: '+eo+'%; background-color: #ffa600; height: 100%;"></div></div>'
+            return bar
+            }},                                                                        
+            {title:"동아리", columns:[                
+                {title:"<i class='fa-solid fa-o' width='25px'></i> 동아리(창의적체험활동동아리수)", field:"창의적체험활동동아리수",hozAlign:"left"},
+                {title:"<i class='fa-solid fa-o' width='25px'></i> 동아리(학생자율동아리수)", field:"학생자율동아리수",hozAlign:"left"},
+            ]},            
+            {title:"급식", columns:[
+                {title:"<i class='fa-solid fa-o' width='25px'></i> 급식(학생 1인당 1식 기준 급식비)", field:"학생 1인당 급식비 (1식 기준)",formatter:"money", formatterParams:{thousand:",",symbol:"원", symbolAfter:true, negativeSign:false, precision:0}, hozAlign:"right"},
+                {title:"<i class='fa-solid fa-o' width='25px'></i> 급식(배식장소)", field:"배식장소",hozAlign:"left"},
+            ]},
+            {title:"도서", columns:[
+                {title:"<i class='fa-solid fa-o' width='25px'></i> 장서(도서자료)", field:"도서자료",formatter:"money", formatterParams:{thousand:",",symbol:"권", symbolAfter:true, negativeSign:false, precision:0}, hozAlign:"right"},
+                {title:"<i class='fa-solid fa-o' width='25px'></i> 장서(비도서자료)", field:"비도서 자료수",formatter:"money", formatterParams:{thousand:",",symbol:"권", symbolAfter:true, negativeSign:false, precision:0}, hozAlign:"right"},
+            ]},
+            {title:"방과후학교", columns:[
+                {title:"<i class='fa-solid fa-o' width='25px'></i> 방과후학교(교과 프로그램수)", field:"교과 프로그램수"},
+                {title:"<i class='fa-solid fa-o' width='25px'></i> 방과후학교(특기적성 프로그램수)", field:"특기적성 프로그램수"},
+                {title:"<i class='fa-solid fa-o' width='25px'></i> 방과후학교(초등돌봄교실 오후돌봄 운영교실수)", field:"초등돌봄교실 오후돌봄 운영교실수"},
+            ]},            
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 장애인 편의시설", field:"disabled_facilities", mutator:disabledMutator, formatter:"star"}, 
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 직위별 교원 현황(원어민강사 미포함)", field:"teachers", mutator:teacherMutator}, 
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 직위별 교원 현황(원어민강사)", field:"원어민강사",formatter:"money", formatterParams:{thousand:",",symbol:"명", symbolAfter:true, negativeSign:false, precision:0}, hozAlign:"right"},
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 주당평균수업시수(교사 1인당)", field:"주당평균수업시수 (교사 1인당)",formatter:"money", formatterParams:{thousand:",",symbol:"시간", symbolAfter:true, negativeSign:false, precision:0}, hozAlign:"right"},
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 연간 1인당 보건실 이용건수", field:"연간 1인당 보건실 이용건수",formatter:"money", formatterParams:{thousand:",",symbol:"건", symbolAfter:true, negativeSign:false, precision:0}, hozAlign:"right"},
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 직원 현황(일반직)", field:"일반직",formatter:"money", formatterParams:{thousand:",",symbol:"명", symbolAfter:true, negativeSign:false, precision:0}, hozAlign:"right"},
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 직원 현황(교육공무직)", field:"교육공무직",formatter:"money", formatterParams:{thousand:",",symbol:"명", symbolAfter:true, negativeSign:false, precision:0}, hozAlign:"right"},
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 학교발전기금", field:"학교발전기금 금액 합계",formatter:"money", formatterParams:{thousand:",",symbol:"원", symbolAfter:true, negativeSign:false, precision:0}, hozAlign:"right"},
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 학교용지(교사대지)", field:"교사대지",formatter:"money", formatterParams:{thousand:",",symbol:"㎡", symbolAfter:true, negativeSign:false, precision:0}, hozAlign:"right"},
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 학교용지(체육장)", field:"체육장",formatter:"money", formatterParams:{thousand:",",symbol:"㎡", symbolAfter:true, negativeSign:false, precision:0}, hozAlign:"right"},
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 학교용지(부속토지)", field:"부속토지",formatter:"money", formatterParams:{thousand:",",symbol:"㎡", symbolAfter:true, negativeSign:false, precision:0}, hozAlign:"right"},                        
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 학교용지(공동사용여부)", field:"공동사용여부", width:90,  hozAlign:"center", formatter:"tickCross", sorter:"boolean"},
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 특색사업 운영(자율학교)", field:"자율학교 (지정·운영)", width:90,  hozAlign:"center", formatter:"tickCross", sorter:"boolean"},
+            {title:"<i class='fa-solid fa-o' width='25px'></i> 특색사업 운영(수준별 수업)", field:"수준별 수업 (운영)", width:90,  hozAlign:"center", formatter:"tickCross", sorter:"boolean"},
+        ],
+        });
+    });
+    </script>
+    </body></html>
